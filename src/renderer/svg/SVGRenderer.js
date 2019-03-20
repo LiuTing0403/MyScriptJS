@@ -123,6 +123,7 @@ export function drawModel(context, model, stroker) {
         const svgElementSelector = 'svg[data-layer="' + patchUpdate.layer + '"]';
         switch (update.type) {
           case 'REPLACE_ALL': {
+            console.log(context)
             context.select(svgElementSelector).remove();
             const parent = context.node();
             if (parent.insertAdjacentHTML) {
